@@ -3,7 +3,7 @@
 }
 
 html, body{
-  font-family: Arial, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   color: rgb(53,50,48);
   line-height: 1.4;
   margin: 0;
@@ -18,6 +18,16 @@ a{
   color: rgb(53,50,48);
   text-decoration: none;
 }
+
+  #menu{
+    display: none;
+    text-align: center;
+  }
+
+  #menu.show{
+    display: block;
+  }
+
 ul{
   list-style: none;
   margin: 0;
@@ -32,20 +42,103 @@ nav a{
 /*Das ist ein Kommentar in CSS*/
 nav a:hover{
   color: rgb(102,205,170);
-  padding-left: 20px;
+}
+#burger{
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  outline: none;
+  float: right;
+  margin-right: 20px;
+}
 
+.intro{
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/intro.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+
+.introtext{
+position: absolute;
+left: 50%;
+top: 50%;
+text-align: center;
+transform: translate(-50%, -50%);
+width: 90%;
+}
+
+.button{
+  background: rgb(102,205,170);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 0px 3px 1px rgba(255,255,255,1);
+  transition: .5s all ease;
+  text-shadow: 5px 1px 2px rgba(150, 150, 150, 1);
+}
+
+.button:hover{
+    background: rgb(255,205,170);
+  }
+
+#main img{
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  width: 100%;
+  display: block;
+}
+
+.card{
+  width: 100%;
+}
+.card p{
+  font-family: 'pt-serif', serif;
+}
+
+.teaser{
+  padding: 1rem;
+  border: 1px solid #000;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top: 0;
+  text-align: center;
+}
+
+.teaser a{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.teaser h3{
+  margin: 0;
 }
 
 @media (min-width: 768px){
   #menu{
     float: right;
+    display: block;
   }
     header{
       height: 60px;
   }
+
+  .card{
+    width: 50%;
+  }
+
   #menu li{
-    float: right;
+    float: left;
     margin-right: 20px;
+    margin-top: 19px;
+  }
+  #menu li:last-child{
+    margin-right: 0;
   }
   /* id wird zu # */
   #logo{
@@ -55,5 +148,20 @@ nav a:hover{
   .wrapper{
     width: 90%;
     margin: auto;
+    height: 100%;
   }
+
+  #burger{
+    display: none;
+  }
+
+h1{
+  font-size: 4rem;
+}
+
+.introtext p{
+  font-size: 2rem;
+}
+
+
 }
